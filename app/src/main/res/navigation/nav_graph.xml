@@ -12,20 +12,22 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_aboutFragment"
+            android:id="@+id/action_mainFragment_to_aboutFragment2"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.aaronzadev.alarmbeta.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.aaronzadev.alarmbeta.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.aaronzadev.alarmbeta.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
