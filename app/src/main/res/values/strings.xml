@@ -4,4 +4,71 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string-array name="number_alerts">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="time_alerts">
+        <item>@string/midMinute</item>
+        <item>@string/oneMinute</item>
+        <item>@string/threeMinute</item>
+        <item>@string/fiveMinute</item>
+    </string-array>
+
+    <string-array name="time_alerts_values">
+        <item>30000</item>
+        <item>60000</item>
+        <item>180000</item>
+        <item>300000</item>
+    </string-array>
+
+
+    <!-- Headers PreferenceCategory -->
+    <string name="header_receptors">Receptores</string>
+    <string name="header_alarm">Ajustes De Alarma</string>
+
+    <!-- titles preferences -->
+    <string name="contact_one">Contacto Uno</string>
+    <string name="contact_two">Contacto Dos</string>
+    <string name="contact_three">Contacto Tres</string>
+    <string name="num_alarms">Numero de Alarmas</string>
+    <string name="time_alarm">Temporizador</string>
+    <string name="msj_alarm">Mensaje de Alarma</string>
+
+    <!-- Summary Preferences -->
+    <string name="summary_contact_one">Selecciona el contacto numero uno</string>
+    <string name="summary_contact_two">Selecciona el contacto numero Dos</string>
+    <string name="summary_contact_three">Selecciona el contacto numero Tres</string>
+    <string name="summary_num_alarms">Selecciona la cantidad de alarmas que seran enviadas</string>
+    <string name="summary_time_alarms">Selecciona cada cuanto tiempo se emitira una alarma</string>
+    <string name="summary_msj_alarm">Personaliza tu mensaje de Alarma</string>
+
+
+    <!-- Text´s Dialog -->
+    <string name="dialog_text">Este es el mensaje que sera enviado en tu Alarma, asegurate de que sea claro y entendible</string>
+    <string name="dialog_title">Mensaje De Alarma</string>
+
+
+    <!-- Entries array timeAlerts -->
+    <string name="midMinute">30 Segundos</string>
+    <string name="oneMinute">1 Minuto</string>
+    <string name="threeMinute">3 Minutos</string>
+    <string name="fiveMinute">5 Minutos</string>
+
+
+    <!-- Num Alerts -->
+    <string name="oneAlarm">1 Alarma</string>
+    <string name="twoAlarm">2 Alarmas</string>
+    <string name="threeAlarm">3 Alarmas</string>
+    <string name="fourAlarm">4 Alarmas</string>
+    <string name="fiveAlarm">5 Alarmas</string>
+
+
 </resources>

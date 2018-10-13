@@ -86,7 +86,7 @@ public class MainFragment extends Fragment {
                         Navigation.findNavController(view).navigate(R.id.aboutFragment);
                         return true;
                     case R.id.settings_menu:
-                        Navigation.findNavController(view).navigate(R.id.settingsFragment);
+                        Navigation.findNavController(view).navigate(R.id.fragSettings);
                         return true;
                     default:
                         return false;
