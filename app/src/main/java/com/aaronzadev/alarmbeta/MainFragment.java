@@ -4,14 +4,18 @@ package com.aaronzadev.alarmbeta;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.skyfishjy.library.RippleBackground;
+
+import androidx.navigation.Navigation;
 
 
 /**
@@ -22,6 +26,8 @@ public class MainFragment extends Fragment {
 
     private RippleBackground background;
     private ImageView imgBtn;
+
+    private BottomNavigationView navView;
 
     private boolean isClicked = false;
 
@@ -38,8 +44,11 @@ public class MainFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        navView = view.findViewById(R.id.navigationView);
+
         background = view.findViewById(R.id.background);
         imgBtn = view.findViewById(R.id.btImg);
 
@@ -64,6 +73,24 @@ public class MainFragment extends Fragment {
                     Toast.makeText(getContext(), "Deteniendo...", Toast.LENGTH_SHORT).show();
                 }
 
+
+            }
+        });
+
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.about_menu:
+                        Navigation.findNavController(view).navigate(R.id.aboutFragment);
+                        return true;
+                    case R.id.settings_menu:
+                        Navigation.findNavController(view).navigate(R.id.settingsFragment);
+                        return true;
+                    default:
+                        return false;
+                }
 
             }
         });
