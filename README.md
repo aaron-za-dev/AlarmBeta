@@ -4,5 +4,5 @@ Aplicación de botón de emergencia el cual envía alertas vía sms a los contac
 
 ScreenShoots:
 
-![alt text](https://raw.githubusercontent.com/aaron-za-dev/AlarmBeta/master/Scree/Contactos.png)
+![alt text](https://raw.githubusercontent.com/aaron-za-dev/AlarmBeta/master/Screeshots/Contactos.png)
 
