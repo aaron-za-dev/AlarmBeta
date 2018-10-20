@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shouldDisableView="true">
 
 
-    <PreferenceCategory android:title="@string/header_receptors">
+    <PreferenceCategory
+        android:title="@string/header_receptors"
+        app:textAllCaps="false">
 
         <ListPreference
             android:key="pref_contactOne"
-            android:title="@string/contact_one"
-            android:summary="@string/summary_contact_one" />
+            android:summary="@string/summary_contact_one"
+            android:title="@string/contact_one" />
 
         <ListPreference
             android:key="pref_contactTwo"
-            android:title="@string/contact_two"
-            android:summary="@string/summary_contact_two" />
+            android:summary="@string/summary_contact_two"
+            android:title="@string/contact_two" />
 
         <ListPreference
             android:key="pref_contactThree"
-            android:title="@string/contact_three"
-            android:summary="@string/summary_contact_three" />
+            android:summary="@string/summary_contact_three"
+            android:title="@string/contact_three" />
 
     </PreferenceCategory>
 
@@ -25,29 +29,29 @@
     <PreferenceCategory android:title="@string/header_alarm">
 
         <ListPreference
-            android:key="pref_num_alarms"
-            android:title="@string/num_alarms"
-            android:summary="@string/summary_num_alarms"
+            android:defaultValue="3"
             android:entries="@array/number_alerts"
             android:entryValues="@array/number_alerts"
-            android:defaultValue="3" />
+            android:key="pref_num_alarms"
+            android:summary="@string/summary_num_alarms"
+            android:title="@string/num_alarms" />
 
         <ListPreference
-            android:key="pref_time_alarms"
-            android:title="@string/time_alarm"
-            android:summary="@string/summary_time_alarms"
+            android:defaultValue="180000"
             android:entries="@array/time_alerts"
             android:entryValues="@array/time_alerts_values"
-            android:defaultValue="180000" />
+            android:key="pref_time_alarms"
+            android:summary="@string/summary_time_alarms"
+            android:title="@string/time_alarm" />
 
         <EditTextPreference
-            android:key="alarm_msj"
-            android:title="@string/msj_alarm"
-            android:summary="@string/summary_msj_alarm"
-            android:persistent="true"
-            android:dialogTitle="@string/dialog_title"
+            android:defaultValue=" "
             android:dialogMessage="@string/dialog_text"
-            android:defaultValue=" " />
+            android:dialogTitle="@string/dialog_title"
+            android:key="alarm_msj"
+            android:persistent="true"
+            android:summary="@string/summary_msj_alarm"
+            android:title="@string/msj_alarm" />
 
     </PreferenceCategory>
 

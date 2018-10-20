@@ -8,21 +8,24 @@
     tools:context=".MainFragment">
 
     <com.skyfishjy.library.RippleBackground
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/background"
-        app:rb_color="#0099CC"
-        app:rb_radius="32dp"
-        app:rb_rippleAmount="4"
-        app:rb_duration="3000"
-        app:rb_scale="6">
+        android:background="#17181D"
+        app:rb_color="@color/colorAccent"
+        app:rb_duration="2500"
+        app:rb_radius="30dp"
+        app:rb_rippleAmount="7"
+        app:rb_scale="8">
 
         <ImageView
             android:id="@+id/btImg"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_centerInParent="true"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@drawable/siren"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="224dp" />
 
     </com.skyfishjy.library.RippleBackground>
 
@@ -30,7 +33,7 @@
         android:id="@+id/navigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         app:itemIconTint="@color/colorNavIcon"
         app:itemTextColor="@color/colorNavText"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private SharedPreferences.Editor editor;
     private Context c;
     private Preference preference;
     private ListPreference listContactOne, listContactTwo, listContactThree;
@@ -27,7 +26,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
     public void onCreatePreferences(Bundle bundle, String s) {
         addPreferencesFromResource(R.xml.preferences);
         c = getActivity().getApplicationContext();
-        fillPreferncesContacts();
+        fillPreferencesContacts();
 
     }
 
@@ -49,28 +48,39 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 break;
             case "pref_num_alarms":
                 preference = findPreference(key);
-                if (sharedPreferences.getString(key, "").equals("1")) {
-                    preference.setSummary(getResources().getString(R.string.oneAlarm));
-                } else if (sharedPreferences.getString(key, "").equals("2")) {
-                    preference.setSummary(getResources().getString(R.string.twoAlarm));
-                } else if (sharedPreferences.getString(key, "").equals("3")) {
-                    preference.setSummary(getResources().getString(R.string.threeAlarm));
-                } else if (sharedPreferences.getString(key, "").equals("4")) {
-                    preference.setSummary(getResources().getString(R.string.fourAlarm));
-                } else if (sharedPreferences.getString(key, "").equals("5")) {
-                    preference.setSummary(getResources().getString(R.string.fiveAlarm));
+                switch (sharedPreferences.getString(key, "")) {
+                    case "1":
+                        preference.setSummary(getResources().getString(R.string.oneAlarm));
+                        break;
+                    case "2":
+                        preference.setSummary(getResources().getString(R.string.twoAlarm));
+                        break;
+                    case "3":
+                        preference.setSummary(getResources().getString(R.string.threeAlarm));
+                        break;
+                    case "4":
+                        preference.setSummary(getResources().getString(R.string.fourAlarm));
+                        break;
+                    case "5":
+                        preference.setSummary(getResources().getString(R.string.fiveAlarm));
+                        break;
                 }
                 break;
             case "pref_time_alarms":
                 preference = findPreference(key);
-                if (sharedPreferences.getString(key, "").equals("30000")) {
-                    preference.setSummary(getResources().getString(R.string.midMinute));
-                } else if (sharedPreferences.getString(key, "").equals("60000")) {
-                    preference.setSummary(getResources().getString(R.string.oneMinute));
-                } else if (sharedPreferences.getString(key, "").equals("180000")) {
-                    preference.setSummary(getResources().getString(R.string.threeMinute));
-                } else if (sharedPreferences.getString(key, "").equals("300000")) {
-                    preference.setSummary(getResources().getString(R.string.fiveMinute));
+                switch (sharedPreferences.getString(key, "")) {
+                    case "30000":
+                        preference.setSummary(getResources().getString(R.string.midMinute));
+                        break;
+                    case "60000":
+                        preference.setSummary(getResources().getString(R.string.oneMinute));
+                        break;
+                    case "180000":
+                        preference.setSummary(getResources().getString(R.string.threeMinute));
+                        break;
+                    case "300000":
+                        preference.setSummary(getResources().getString(R.string.fiveMinute));
+                        break;
                 }
                 break;
             case "alarm_msj":
@@ -98,7 +108,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
     }
 
 
-    private void fillPreferncesContacts() {
+    private void fillPreferencesContacts() {
 
 
         listContactOne = (ListPreference) findPreference("pref_contactOne");
@@ -167,7 +177,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                         String contactNumber = pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
                         allContacts.add(new Contact(contactName, contactNumber));
-                        break;
+                        //break;
                     }
                     pCur.close();
                 }
