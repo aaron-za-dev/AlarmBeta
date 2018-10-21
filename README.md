@@ -22,4 +22,4 @@ Aplicación de botón de emergencia el cual envía alertas vía sms a los contac
 ![alt text](https://raw.githubusercontent.com/aaron-za-dev/AlarmBeta/master/Screeshots/Temporizador.png)
 
 # Recepcion de Alerta
-![alt text](https://raw.githubusercontent.com/aaron-za-dev/AlarmBeta/master/Screeshots/Receptor.png)
+![alt text](https://raw.githubusercontent.com/aaron-za-dev/AlarmBeta/master/Screeshots/Receptorx.png)
